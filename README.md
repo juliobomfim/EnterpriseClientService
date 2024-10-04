@@ -25,4 +25,4 @@ Esta API em .NET utiliza o padrão CQRS (Command Query Segregation Responsibilit
 ## Como executar
 
 - Executar comando `dotnet run`.
-- As migrations serão executadas altomaticamente.
+- As migrations serão executadas automaticamente.
