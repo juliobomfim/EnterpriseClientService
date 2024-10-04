@@ -23,6 +23,10 @@ Esta API em .NET utiliza o padrão CQRS (Command Query Segregation Responsibilit
 - MongoDB (CQRS).
 
 ## Como executar
-
+- Rodar `docker compose up -d`.
 - Executar comando `dotnet run`.
 - As migrations serão executadas automaticamente.
+
+## Dados de conexão (Bancos)
+- SQLServer - Para acessar login: `sa` senha: `ECS#123!!&_-__`.
+- MongoDB   - Para acessar o mongoExpress utilize login: `admin` senha: `MongoDB!`.
