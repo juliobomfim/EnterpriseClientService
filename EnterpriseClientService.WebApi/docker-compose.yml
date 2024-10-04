@@ -1,0 +1,48 @@
+﻿services:
+  sqlServer:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    volumes:
+      - sqlserverData:/var/opt/mssql
+    networks:
+      - enterpriseClientNetwork
+    container_name: EnterpriseClientServiceData
+    ports:
+        - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=ECS#123!!&_-__
+      - MSSQL_PID=Express
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: enterpriseClienteService
+      ME_CONFIG_BASICAUTH_PASSWORD: ECS#123
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: MongoDB!
+    links:
+      - mongo
+    networks:
+      - enterpriseClientNetwork
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: MongoDB!
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodbData:/data/db
+    networks:
+      - enterpriseClientNetwork
+volumes:
+  sqlserverData: {}
+  mongodbData: {}
+
+networks:
+  enterpriseClientNetwork:
+    driver: bridge
