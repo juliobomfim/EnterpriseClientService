@@ -17,9 +17,12 @@ Esta API em .NET utiliza o padrão CQRS (Command Query Segregation Responsibilit
 - Swagger.
 
 ## Requisitos
+
 - .NET Core 8 SDK.
 - SQL Server (Banco Relacional).
 - MongoDB (CQRS).
 
 ## Como executar
-- executar comando `dotnet run`.
+
+- Executar comando `dotnet run`.
+- As migrations serão executadas altomaticamente.
