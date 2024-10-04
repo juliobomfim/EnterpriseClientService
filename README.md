@@ -4,9 +4,9 @@ Esta API em .NET utiliza o padrão CQRS (Command Query Segregation Responsibilit
 
 ## Funcionalidades
 
--Listagem de Clientes: Visualizar os clientes cadastrados.
--Cadastro e Edição de Clientes: Inserir e editar dados dos clientes.
--Remoção de Clientes: Excluir clientes.
+- Listagem de Clientes: Visualizar os clientes cadastrados.
+- Cadastro e Edição de Clientes: Inserir e editar dados dos clientes.
+- Remoção de Clientes: Excluir clientes.
 
 ## Frameworks
 
